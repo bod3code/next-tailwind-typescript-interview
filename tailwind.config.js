@@ -9,7 +9,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-rubik)", ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        teal: "#70c4bb",
+        dark: "263446",
       },
     },
   },
