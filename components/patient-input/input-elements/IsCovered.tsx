@@ -11,7 +11,7 @@ const IsCovered = ({ patient }: IsCoveredProps) => {
         type="checkbox"
         name="isCovered"
         id="isCovered"
-        checked={patient?.isCovered}
+        checked={patient.isCovered}
         onChange={() => setIsCovered(!patient.isCovered)}
         className="relative cursor-pointer peer shrink-0 h-4 w-4 appearance-none focus:ring-0 accent-teal border-2 border-[#9DA7BE] rounded-sm checked:bg-teal checked:border-transparent checked:border-0"
       />

@@ -12,7 +12,7 @@ const InsuranceID = (patient: Patient) => {
         value={id}
         maxLength={20}
         onChange={(e) => setId(e.target.value)}
-        className={`h-11 p-2 text-sm placeholder-gray-300 rounded-md border border-gray-100`}
+        className={`h-11 w-full flex p-2 text-sm placeholder-gray-300 rounded-md border border-gray-100`}
         placeholder="Ins. ID/SSN"
       />
     </div>

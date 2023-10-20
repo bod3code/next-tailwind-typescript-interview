@@ -51,7 +51,7 @@ const HouseholdForm = () => {
       <div className="text-slate-800 text-base font-medium leading-normal">
         Household
       </div>
-      <div className="items-start grid grid-cols-[65px_auto_70px_130px_auto] mt-4">
+      <div className="items-start grid grid-cols-[65px_auto_85px_130px_auto] mt-4">
         <Label name="Covered" />
         <Label name="Name" />
         <Label name="Subscriber" />
@@ -60,9 +60,9 @@ const HouseholdForm = () => {
         {patients.map((patient, index) => (
           <PatientRow key={index} patient={patient} />
         ))}
-        <div className="items-end gap-2 inline-flex justify-end">
+        <div className="col-span-5 float-right inline-flex justify-end">
           <div
-            className="grow shrink basis-0 cursor-pointer text-right text-teal text-xs font-light leading-none"
+            className="cursor-pointer text-right text-teal text-xs font-light leading-none"
             onClick={handleAddPatientClick} // Call handleAddPatientClick on click
           >
             +Add new member

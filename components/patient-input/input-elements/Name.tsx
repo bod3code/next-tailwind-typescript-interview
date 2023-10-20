@@ -15,15 +15,11 @@ const NameInput = (patient: Patient) => {
         value={name}
         maxLength={150}
         onChange={(e) => setName(e.target.value)}
-        onBlur={(e) => {
-          setIsNameTouched(true);
-          if (isNameValid()) setName(e.target.value);
-        }}
         className={`inline-block p-3 rounded-md h-11 border border-gray-100"
         }`}
         placeholder="Enter name"
       />
-      <input
+      {/* <input
         type="text"
         name="nickname"
         id="nickname"
@@ -32,7 +28,7 @@ const NameInput = (patient: Patient) => {
         onChange={(e) => setNickname(e.target.value)}
         className={`inline-block p-3 rounded-md h-11 border border-gray-100 `}
         placeholder="Enter preferred name"
-      />
+      /> */}
     </>
   );
 };
@@ -57,11 +53,12 @@ interface NameProps {
   patient: Patient & CreatePatientStore;
 }
 const Name = ({ patient }: NameProps) => {
+  const { isNameTouched, setIsNameTouched } = usePatientStore();
   useEffect(() => {
     if (patient?.name?.length === 0) {
-      patient.setIsNameTouched(false);
+      setIsNameTouched(false);
     }
-  }, [patient]);
+  }, [patient, setIsNameTouched]);
 
   return (
     <div className="">
