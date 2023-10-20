@@ -1,7 +1,7 @@
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import usePatientStore from "stores/store";
 
-const InsurancePrimacy = () => {
+const InsurancePrimacy = (patient: any) => {
   const { insurancePrimacy, setInsurancePrimacy } = usePatientStore();
 
   return (

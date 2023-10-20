@@ -1,7 +1,7 @@
 import { Patient } from "stores/store";
 import { useState } from "react";
 
-const InsuranceID = (patient: Patient) => {
+const InsuranceID = (patient: any) => {
   const [id, setId] = useState(patient.id);
   return (
     <div className="relative mt-2">

@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { UserCircleIcon } from "@heroicons/react/24/solid";
-import usePatientStore, { CreatePatientStore, Patient } from "stores/store";
+import usePatientStore, { Patient } from "stores/store";
 
-const NameInput = (patient: Patient) => {
+const NameInput = ({ patient }: { patient: Patient }) => {
   const { name, nickname } = patient;
   const { setNickname, setName, isNameTouched, setIsNameTouched } =
     usePatientStore();
@@ -33,7 +33,7 @@ const NameInput = (patient: Patient) => {
   );
 };
 
-const DisplayName = (patient: Patient) => {
+const DisplayName = ({ patient }: { patient: Patient }) => {
   return (
     <>
       <label htmlFor="name" className="inline">
@@ -50,7 +50,7 @@ const DisplayName = (patient: Patient) => {
 };
 
 interface NameProps {
-  patient: Patient & CreatePatientStore;
+  patient: Patient;
 }
 const Name = ({ patient }: NameProps) => {
   const { isNameTouched, setIsNameTouched } = usePatientStore();

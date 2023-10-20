@@ -1,6 +1,6 @@
 import usePatientStore from "stores/store";
 
-const IsSubscriber = () => {
+const IsSubscriber = (patient: any) => {
   const { isSubscriber, setIsSubscriber } = usePatientStore();
 
   return (

@@ -8,9 +8,6 @@ export type Patient = {
   isCovered: boolean;
   isSubscriber: boolean;
   insurancePrimacy: "Primary" | "Secondary" | "";
-};
-
-export type CreatePatientStore = {
   setId: (patientId: string) => void;
   setName: (patientName: string) => void;
   isNameTouched: boolean;
@@ -94,7 +91,7 @@ const usePatientStore = create<CreatePatientStore & PatientList>()(
         });
       },
       patients: [],
-      addPatient: (patient: Patient) => {
+      addPatient: (patient: any) => {
         const { patients } = get();
         set((state) => ({
           ...state,

@@ -57,7 +57,7 @@ const HouseholdForm = () => {
         <Label name="Subscriber" />
         <Label name="Insurance" />
         <Label name="ID" />
-        {patients.map((patient, index) => (
+        {patients.map((patient: any, index: number) => (
           <PatientRow key={index} patient={patient} />
         ))}
         <div className="col-span-5 float-right inline-flex justify-end">
